@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayJamm - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #faf5ff, #9333ea);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .home-container {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            max-width: 32rem;
+            width: 100%;
+            color: #333;
+            text-align: center;
+        }
+        .home-logo {
+            margin-bottom: 1.5rem;
+        }
+        .home-logo img {
+            height: 56px;
+        }
+        .home-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #9333ea;
+            margin-bottom: 1rem;
+        }
+        .home-subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .home-btn {
+            padding: 0.75rem 2rem;
+            background: linear-gradient(to right, #9333ea, #ec4899);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .home-btn:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .video-section {
+            margin-top: 2rem;
+        }
+        .video-section video {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-logo">
+            <img src="logo.png" alt="PayJamm" />
+        </div>
+        <div class="home-title">Welcome to PayJamm</div>
+        <div class="home-subtitle">Your music, your royalties, one platform. Sign up and start managing your music career today!</div>
+        <button class="home-btn" onclick="window.location.href='signin.html'">Sign In / Sign Up</button>
+        <div class="video-section">
+            <video controls poster="logo.png">
+                <source src="PAYJAMM COMMERCIAL.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
