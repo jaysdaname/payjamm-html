@@ -1,8 +1,48 @@
 # PayJamm SEO Plan
 
-**Site:** https://payjamm.com · **Audited:** August 2026 · **Scope:** index.html, signin.html, verify.html, dashboard.html
+**Site:** https://payjamm.com · **Audited:** August 2026 · **Re-audited:** October 20, 2026 · **Scope:** index.html, signin.html, verify.html, dashboard.html
 
 ---
+
+## October 2026 re-audit: what changed in two months
+
+**Short version: PayJamm is still invisible in search, and the fixes that would start changing that are already written but not live.**
+
+- **None of the plan has shipped yet.** The Phase 1–2 fixes (meta tags, canonical, Open Graph image, FAQ/Organization/Video structured data, robots.txt, sitemap.xml, noindex on app pages, pricing-heading fix) have been ready in PR #1 since August 23, but the PR is unmerged and `main` still holds the pre-fix homepage. Unless the live site is deployed from somewhere other than this repo, it is still running the unoptimized version.
+- **Still not indexed.** Fresh searches for `"payjamm"` and `payjamm.com register music royalties independent artists` return zero pages from payjamm.com. That's roughly two more months without organic traffic.
+- **New: your brand name collides with "PayJam".** A search for "payjamm" surfaces **PayJam** (payj.am and payjam.webflow.io), an unrelated fintech. Until payjamm.com is indexed and has brand signals, Google may treat "payjamm" as a misspelling of "PayJam" and send your branded searches to that company.
+- **New: the only things ranking for your brand are a business registry and TikTok.** The Florida registry listing for PAYJAMM LLC (Miami, filed May 2025) and your TikTok account are what Google shows for your name. So TikTok is your most discoverable asset today, and every TikTok should drive viewers to payjamm.com.
+- **New: a direct competitor has taken the pillar-content slot.** **Stackt** (getstackt.co) now ranks with *"The Complete Guide to Music Royalty Registrations for Independent Artists (2026)"*, which is nearly the same pillar page this plan recommended for PayJamm. TunePact, Orphiq, Symphonic, and Ditto also publish royalty guides aimed at independent artists. The category is getting crowded, so a generic "royalties explained" guide is no longer enough to stand out.
+
+### Revised 30-day sprint (replaces the original week numbers)
+
+| When | Action | Who |
+|---|---|---|
+| This week | **Merge PR #1 and deploy.** Confirm `payjamm.com/robots.txt`, `/sitemap.xml`, and `/og-image.png` load in a browser. | You |
+| This week | **Google Search Console:** verify the domain, submit the sitemap, and use URL Inspection → *Request indexing* on the homepage. Do the same in Bing Webmaster Tools. | You |
+| This week | Replace the placeholder `tel:+1234567890` with the real number (or remove the Click-to-Call buttons). Set the www → non-www 301 redirect at your host. | You |
+| Week 2 | **Brand-disambiguation push:** create a Google Business Profile under the exact name "PayJamm" (you have a Miami business registration), and make every social bio use "PayJamm" with the double m and link to `https://payjamm.com`. Pin a TikTok that says the URL out loud. | You |
+| Week 2 | Publish real `/terms`, `/privacy`, and `/contact` pages (the footer links to them and they don't exist). | Dev |
+| Weeks 3–4 | Publish the first two blog posts, taking a different angle from Stackt's generic guide (see below). Cut each into TikTok clips that link back to the post. | Content |
+| Months 2–3 | Remaining posts from Phase 3, a "PayJamm vs Stackt vs TuneRegistry vs Songtrust" comparison page, and the Phase 4 outreach. | Content |
+
+### Updated content angle: lead with unclaimed royalties
+
+Stackt already owns "complete guide to royalty registration". Instead, lead with the angle that creates urgency and fits PayJamm's "we find and collect it for you" pitch:
+
+1. **"You May Have Unclaimed Royalties Waiting at The MLC — Here's How to Check"**: The MLC holds unmatched royalties for a limited period before redistributing them by market share, so unregistered artists lose that money for good. This is your strongest hook, and it is the exact moment an artist needs PayJamm.
+2. **"Is DistroKid Enough? What Your Distributor Doesn't Collect"**: this expands homepage FAQ #2 and catches artists who assume distribution covers everything.
+3. Then continue with the original Phase 3 list (ASCAP vs BMI, SoundExchange step-by-step, types of royalties, producer royalties).
+
+### Revised targets (counted from the day PR #1 is deployed)
+
+- Homepage indexed and ranking #1 for "PayJamm" (ahead of PayJam) within 2–4 weeks.
+- Google Business Profile and social profiles filling the rest of the branded results page within 6 weeks.
+- First non-branded impressions in Search Console within 4–8 weeks, and measurable non-branded clicks by month 3–4.
+
+---
+
+*The original August 2026 audit follows. Its findings about the site's code still apply, because the fixes haven't been deployed.*
 
 ## 1. Where the site stands today
 
@@ -30,7 +70,7 @@ PayJamm's category is **music publishing administration / royalty registration f
 | Intent | Keywords | Target page |
 |---|---|---|
 | Buy (high intent) | music royalty registration service, publishing administration for independent artists, register my music with ASCAP BMI SoundExchange MLC | Homepage |
-| Compare | PayJamm vs TuneRegistry, Songtrust alternatives, DistroKid vs publishing admin, is DistroKid enough to collect royalties | Comparison pages |
+| Compare | PayJamm vs Stackt, PayJamm vs TuneRegistry, Songtrust alternatives, DistroKid vs publishing admin, is DistroKid enough to collect royalties | Comparison pages |
 | Learn (top of funnel) | how to collect music royalties, SoundExchange registration guide, what is The MLC, ASCAP vs BMI, types of music royalties, unclaimed royalties (MLC black box) | Blog / guides |
 | Brand | PayJamm, PayJamm reviews, PayJamm pricing | Homepage + future reviews/pricing pages |
 
